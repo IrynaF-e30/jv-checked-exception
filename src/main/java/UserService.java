@@ -1,19 +1,24 @@
 public class UserService {
-    private final PasswordValidator passwordValidator = new PasswordValidator();
+    private PasswordValidator passwordValidator = new PasswordValidator();
 
-    public void registerUser(String password, String repeatPassword) {
+    public void registerUser(User user) {
         try {
-            passwordValidator.validate(password, repeatPassword);
-            saveUser(password);
-            System.out.println("Користувача успішно зареєстровано.");
+            passwordValidator.validate(user.getRepeatPassword(),
+                    user.getPassword());
+            saveUser(user);
         } catch (PasswordValidationException e) {
-            System.out.println("Ваші паролі невірні. Спробуйте ще раз.");
+            System.out.println("Your passwords are incorrect. Try again.");
         }
     }
 
-    private void saveUser(String password) {
-        System.out.println("Збережено користувача з паролем: " + password);
+    private void saveUser(User user) {
+        System.out.println(user + " was saved to database!!!");
+    }
+
+    public void registerUser(String securepassword, String securepassword1) {
     }
 }
+
+
 
 
