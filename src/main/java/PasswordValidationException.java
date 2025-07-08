@@ -1,5 +1,6 @@
-public class PasswordValidationException extends Throwable {
-public PasswordValidationException(String message) {
-    super(message);
+public class PasswordValidationException extends Exception {
+    public PasswordValidationException(String message) {
+        super(message);
+    }
 }
-}
+
