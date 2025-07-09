@@ -1,16 +1,12 @@
 public class PasswordValidator {
-    public void validate(String password, String repeatPassword)
-            throws PasswordValidationException {
-        if (password == null
-                || repeatPassword == null
-                || password.isEmpty()
-                || repeatPassword.isEmpty()
-                || !password.equals(repeatPassword)
+    public void validate(String password, String repeatPassword) throws PasswordValidationException {
+        if (password == null || !password.equals(repeatPassword)
                 || password.length() < 10) {
-            throw new PasswordValidationException("Неправильні паролі");
+            throw new PasswordValidationException("Wrong passwords");
         }
     }
 }
+
 
 
 
