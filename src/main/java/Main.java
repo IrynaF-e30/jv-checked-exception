@@ -1,15 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        UserService userService = new UserService();
+        UserService service = new UserService();
 
-        // Правильний пароль
-        userService.registerUser("securepassword", "securepassword");
+        // ❗ Створюємо об'єкт User
+        User user1 = new User("short", "short");
+        service.registerUser(user1);
 
-        // Неправильний (короткий) пароль
-        userService.registerUser("short", "short");
-
-        // Різні паролі
-        userService.registerUser("longpassword123", "differentpassword");
+        User user2 = new User("securePassword1", "securePassword1");
+        service.registerUser(user2);
     }
 }
 
