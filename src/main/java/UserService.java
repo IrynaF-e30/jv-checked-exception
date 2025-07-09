@@ -3,8 +3,8 @@ public class UserService {
 
     public void registerUser(User user) {
         try {
-            passwordValidator.validate(user.getRepeatPassword(),
-                    user.getPassword());
+            passwordValidator.validate(user.repeatPassword(),
+                    user.password());
             saveUser(user);
         } catch (PasswordValidationException e) {
             System.out.println("Your passwords are incorrect. Try again.");
@@ -18,6 +18,7 @@ public class UserService {
     public void registerUser(String securepassword, String securepassword1) {
     }
 }
+
 
 
 
