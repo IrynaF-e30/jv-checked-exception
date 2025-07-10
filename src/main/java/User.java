@@ -1,16 +1,15 @@
 public record User(
-        String login,
+        String email,
         String password,
         String repeatPassword
 ) {
-
     @Override
     public String toString() {
-        return "User{login='" + login + "', password='" + password + "', repeatPassword='"
+        return "User{email='" + email + "', password='" + password + "', repeatPassword='"
                 + repeatPassword + "'}";
     }
-
 }
+
 
 
 
