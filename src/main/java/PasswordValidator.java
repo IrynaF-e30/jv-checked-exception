@@ -1,28 +1,20 @@
+package core.basesyntax;
+
 public class PasswordValidator {
     public void validate(User user) throws PasswordValidationException {
-        if (user == null) {
-            throw new PasswordValidationException("User is null");
-        }
-
-        String password = user.password();
-        String repeatPassword = user.repeatPassword();
-
-        if (password == null || repeatPassword == null
-                || password.isBlank() || repeatPassword.isBlank()
-                || !password.equals(repeatPassword)
-                || password.length() < 10
-                || !password.matches(".*[A-Z].*")
-                || !password.matches(".*[a-z].*")
-                || !password.matches(".*\\d.*")
-                || !password.matches(".*[^a-zA-Z0-9].*")) {
+        if (user == null
+                || user.password() == null || user.repeatPassword() == null
+                || user.password().isBlank() || user.repeatPassword().isBlank()
+                || !user.password().equals(user.repeatPassword())
+                || user.password().length() < 10
+                || !user.password().matches(".*[A-Z].*")
+                || !user.password().matches(".*[a-z].*")
+                || !user.password().matches(".*\\d.*")
+                || !user.password().matches(".*[^a-zA-Z0-9].*")) {
             throw new PasswordValidationException("Password is not valid");
         }
     }
 }
-
-
-
-
 
 
 

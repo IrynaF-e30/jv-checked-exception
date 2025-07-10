@@ -1,3 +1,5 @@
+package core.basesyntax;
+
 public class UserService {
     private final PasswordValidator passwordValidator = new PasswordValidator();
 
