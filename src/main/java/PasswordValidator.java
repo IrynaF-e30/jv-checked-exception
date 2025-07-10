@@ -10,10 +10,8 @@ public class PasswordValidator {
                 || !password.matches(".*[A-Z].*")
                 || !password.matches(".*[a-z].*")
                 || !password.matches(".*\\d.*")
-                || !password.matches(".*[^a-zA-Z0-9].*")) {
+                || !password.matches(".*[^a-zA-Z0-9].*"))
             throw new PasswordValidationException("Password is not valid");
-        }
-
     }
 }
 
