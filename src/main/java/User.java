@@ -1,5 +1,3 @@
-package core.basesyntax;
-
 public record User(
         String email,
         String password,

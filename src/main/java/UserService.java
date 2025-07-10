@@ -1,5 +1,3 @@
-package core.basesyntax;
-
 public class UserService {
     private final PasswordValidator passwordValidator = new PasswordValidator();
 
@@ -16,4 +14,5 @@ public class UserService {
         System.out.println("User " + user + " was saved to database!!!");
     }
 }
+
 
