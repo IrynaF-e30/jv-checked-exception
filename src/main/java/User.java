@@ -6,8 +6,10 @@ public record User(
 
     @Override
     public String toString() {
-        return "User{login='" + login + "', password='***', repeatPassword='***'}";
+        return "User{login='" + login + "', password='" + password + "', repeatPassword='"
+                + repeatPassword + "'}";
     }
+
 }
 
 

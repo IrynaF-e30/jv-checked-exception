@@ -3,7 +3,7 @@ public class UserService {
 
     public void registerUser(User user) {
         try {
-            passwordValidator.validate(user.password(), user.repeatPassword());
+            passwordValidator.validate(user);
             saveUser(user);
         } catch (PasswordValidationException e) {
             System.out.println("Your passwords are incorrect. Try again.");
@@ -11,8 +11,6 @@ public class UserService {
     }
 
     private void saveUser(User user) {
-        System.out.println("User " + user.toString() + " was saved to database!!!");
+        System.out.println("User " + user + " was saved to database!!!");
     }
 }
-
-
