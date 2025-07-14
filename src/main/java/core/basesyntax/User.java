@@ -1,9 +1,20 @@
 package core.basesyntax;
 
-public record User(String login, String password, String repeatPassword) {
-    @Override
-    public String toString() {
-        return "User{login='" + login + "', password='***', repeatPassword='***'}";
+public class User {
+    private final String password;
+    private final String repeatPassword;
+
+    public User(String password, String repeatPassword) {
+        this.password = password;
+        this.repeatPassword = repeatPassword;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getRepeatPassword() {
+        return repeatPassword;
     }
 }
 
