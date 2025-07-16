@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class PasswordValidator {
 
-    public void validate(String password, String repeatPassword) throws PasswordValidationException {
+    public void validate(String password, String repeat) throws PasswordValidationException {
 
-        if (isPasswordValid(password, repeatPassword)) {
+        if (isPasswordValid(password, repeat)) {
             throw new PasswordValidationException("Wrong passwords");
         }
     }
